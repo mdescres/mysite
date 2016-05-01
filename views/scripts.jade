@@ -1,28 +1,20 @@
 script(src='javascripts/jquery.min.js')
-    script(src='javascripts/what-input.min.js')
-    script(src='javascripts/foundation.min.js')
-    script(src='javascripts/app.js')
-    script.
-      $('#skills-menu').click( function() {
-      $('#research').foundation('down', $('#research-tab'), true);
-      $('#productivity').foundation('down', $('#productivity-tab'), true);
-      $('#sherpa').foundation('down', $('#sherpa-tab'), true);
-      });
-      /* Problem: when toggling the accordion item the container was not
-      expanded. The content was expanded but not the container who was staying
-      at the same size of the other equalize-watch element.
-      Solution: configure the equalizer programatically in order to reflow the
-      container when showing and hiding the accordion.
-      Issues encountered: 1) foundation 5 vs foundation 6; understand method
-      calling. 2) element jquery vs DOM elements. 3) JS function's return value
-      4) event foundation 6.*/
-      var cb = [];
-      $('#equalizer-fork-js').on('down.zf.accordion', function() {
-      $('#equalizer-fork-js').foundation('getHeights', function(height){cb=height});
-      $('#equalizer-fork-js').foundation('applyHeight', cb);
-      });
-      $('#equalizer-fork-js').on('up.zf.accordion', function() {
-      $('#equalizer-fork-js').foundation('getHeights', function(height){cb=height});
-      $('#equalizer-fork-js').foundation('applyHeight', cb);
-      });
+script(src='javascripts/what-input.min.js')
+script(src='javascripts/foundation.min.js')
+script(src='javascripts/app.js')
+script.
+  $('#skills-menu').click( function() {
+  $('#research').foundation('down', $('#research-tab'), true);
+  $('#productivity').foundation('down', $('#productivity-tab'), true);
+  $('#sherpa').foundation('down', $('#sherpa-tab'), true);
+  });      
+  var cb = [];
+  $('#equalizer-fork-js').on('down.zf.accordion', function() {
+  $('#equalizer-fork-js').foundation('getHeights', function(height){cb=height});
+  $('#equalizer-fork-js').foundation('applyHeight', cb);
+  });
+  $('#equalizer-fork-js').on('up.zf.accordion', function() {
+  $('#equalizer-fork-js').foundation('getHeights', function(height){cb=height});
+  $('#equalizer-fork-js').foundation('applyHeight', cb);
+  });
 
