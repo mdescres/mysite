@@ -4278,7 +4278,7 @@ p.responsalign {
   /*When tweaking in a
                                                                                 breakpoint, the tweaked
                                                                                 element as to be reset in
-                                                                                other breakpoints*/ }
+		                                                                other breakpoints*/ }
   @media screen and (min-width: 40em) {
     p.responsalign {
       text-align: right; } }
@@ -4363,11 +4363,11 @@ p.responsalign {
       float: left;
       padding-left: 0.52083rem;
       padding-right: 0.52083rem;
-      margin: 0 0 1rem 0;
       padding: 1rem;
       border: 1px solid rgba(10, 10, 10, 0.25);
       border-radius: 0;
-      background-color: white; }
+      background-color: white;
+      height: inherit; }
       #resume .resume-container .main-content .resume::before, #resume .resume-container .main-content .resume::after {
         content: ' ';
         display: table;

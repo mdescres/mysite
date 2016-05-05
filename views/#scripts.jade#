@@ -1,0 +1,20 @@
+script(src='javascripts/jquery.min.js')
+script(src='javascripts/what-input.min.js')
+script(src='javascripts/foundation.min.js')
+script(src='javascripts/app.js')
+script.
+$('#skills-menu').click( function() {
+$('#research').foundation('down', $('#research-tab'), true);
+      $('#productivity').foundation('down', $('#productivity-tab'), true);
+      $('#sherpa').foundation('down', $('#sherpa-tab'), true);
+      });      
+      var cb = [];
+      $('#equalizer-fork-js').on('down.zf.accordion', function() {
+      $('#equalizer-fork-js').foundation('getHeights', function(height){cb=height});
+      $('#equalizer-fork-js').foundation('applyHeight', cb);
+      });
+      $('#equalizer-fork-js').on('up.zf.accordion', function() {
+      $('#equalizer-fork-js').foundation('getHeights', function(height){cb=height});
+      $('#equalizer-fork-js').foundation('applyHeight', cb);
+      });
+

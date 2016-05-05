@@ -1,0 +1,25 @@
+Front-end. 
+This mobile first responsive website is built with the Foundation framework. This framework uses Sass to generate the layout. It contains a default _setting.scss file that is customized. In addition, a file called _mytheme.scss has been created and contains the setting of mytheme. Those file starts with an underscore according to the sass rules. During this development, npm start run in the root folder of the foundation project allows to compile the scss to css after each save. During this process, I couldn't find a optimized way to debug and I was force to save after each change to be able to revert my modifications in case the compile file wouldn't work. Compass seems to be a solution for this but couldn't implement it.
+
+In addition to the styling, the framework offers several plugins. This website uses the equalizer, accordion and abide js plugins. All are included in the foundation.min.js file. The are added in the main html file in the script tag near the end of the file.
+
+Back-end. 
+The server engine uses node.js and is built using the express framework. It this case, it has been genarated with the express-generator feature. Once genarated the main files of the foundation project have been added. This includs index.html, app.css and .js files. Note that the html file had to be converted into pug (formely jade) templating language. As indentation become more significant, I used a plugin on emac called sws-mode (src: https://github.com/brianc/jade-mode). After addding it, I had to turn the mode on using M-x g sws-mode. This allowed me to use precise indentation a make modification on the file.
+run server:
+cmd: DEBUG=myapp:* npm start
+src: http://expressjs.com/en/starter/generator.html
+
+Host.
+Hosting is ensured by heroku and github. 
+src: https://devcenter.heroku.com/articles/deploying-nodejs
+src: https://stormpath.com/blog/heroku-stormpath-and-expressjs/
+src: https://help.github.com/articles/adding-a-file-to-a-repository-from-the-command-line/
+
+DNS. 
+Domain name is bought at Godaddy and the redirection includes a CNAME setting and the 301 domain forwarding.
+src: https://gist.github.com/mikestone14/11198630
+     
+Local modification and remote update. 
+cmd: heroku local web | start app locally on http://localhost:5000/.
+cmd: git commit -m "label for the commit" | commit files into the local repository
+cmd: git push origin master
